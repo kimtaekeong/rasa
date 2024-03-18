@@ -21,7 +21,7 @@ responses:
   # utter_did_that_help:
   # - text: "Did that help you?"
 
-  utter_happy:
+  utter_mood_answer:
   - text: "저야 뭐 매일 똑같죠 ㅎㅎ!"
 
   # utter_goodbye:
