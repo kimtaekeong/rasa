@@ -3,19 +3,15 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - 안녕
+    - 안녕하세요
+    - 반갑습니다
+    - 오랜만이에요
+    - 좋은 아침이에요
+    - 반가워요
+    - 방가방가
+    - 하이루
+    - 좋은 아침입니다
 
 - intent: goodbye
   examples: |
