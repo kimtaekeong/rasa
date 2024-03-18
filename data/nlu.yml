@@ -13,6 +13,13 @@ nlu:
     - 하이루
     - 좋은 아침입니다
 
+- intent: mood_answer
+  examples: |
+    - 오늘 기분 어떄?
+    - 밥은 잘 잡쉈어?
+    - 하는 일 모두 무탈하지?
+
+
 - intent: goodbye
   examples: |
     - good afternoon
