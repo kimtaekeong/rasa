@@ -5,24 +5,60 @@ intents:
   # - goodbye
   # - affirm
   # - deny
-  - mood_great
+  - mood_answer
+  - apartment
   - affirm
+  - address
+  - dong
+  - hosu
   # - mood_unhappy
   # - bot_challenge
+entities:
+  - name
+  - add
+  - do
+  - ho
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  add:
+    type: text
+    influence_conversation: false  
+  do:
+      type: text
+      influence_conversation: false   
+  ho:
+      type: text
+      influence_conversation: false   
+
 
 responses:
   utter_greet:
   - text: "안녕하세요 저는 오늘의 챗봇입니다!"
 
-  # utter_cheer_up:
+  utter_mood_answer:
+  - text: "저야 뭐 매일 똑같죠 ㅎㅎ!"
+
+  utter_detail_address:
+  - text: "{name}, 몇 동 몇 호세요 ?"
+
+  utter_entire_add:
+  - text: "{name} {add}로 보내겠습니다."
+  
+  utter_dong:
+  - text: "호수도 말씀해주세요"
+
+  utter_hosu:
+  - text: "{name} {do} {ho}로 보내겠습니다."
+
+    # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
   #   image: "https://i.imgur.com/nGF1K8f.jpg"
 
   # utter_did_that_help:
   # - text: "Did that help you?"
-
-  utter_mood_answer:
-  - text: "저야 뭐 매일 똑같죠 ㅎㅎ!"
 
   # utter_goodbye:
   # - text: "Bye"
@@ -30,6 +66,7 @@ responses:
   # utter_iamabot:
   # - text: "I am a bot, powered by Rasa."
 
+    
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

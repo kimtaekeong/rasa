@@ -9,6 +9,22 @@ stories:
   - intent: mood_answer
   - action: utter_mood_answer
 
+- story: collecting address 1 
+  steps:
+  - intent: apartment
+  - action: utter_detail_address
+  - intent: address
+  - action: utter_entire_add
+
+- story: collecting address 2
+  steps:
+  - intent: apartment
+  - action: utter_detail_address
+  - intent: dong
+  - action: utter_dong
+  - intent: hosu
+  - action: utter_hosu
+
 # - story: sad path 1
 #   steps:
 #   - intent: greet

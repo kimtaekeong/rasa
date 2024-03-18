@@ -1,6 +1,16 @@
 version: "2.0"
 
 nlu:
+
+- intent: apartment
+  examples: |
+    - [은마아파트](name)
+    - [장미아파트](name)
+    - [사랑아파트](name)
+    - [푸르지오](name)
+    - [아이파크](name)
+    - [@@아파트](name)
+
 - intent: greet
   examples: |
     - 안녕
@@ -13,6 +23,29 @@ nlu:
     - 하이루
     - 좋은 아침입니다
 
+- intent: address
+  examples: |
+    - [100동 100호](add)
+    - [101동 101호](add)
+    - [117동 801호](add)
+    - [103동 303호](add)
+    - [110동 505호](add)
+
+- intent: dong
+  examples: |
+    - [108동](do)
+    - [101동](do)
+    - [8동](do)
+    - [***동](do)
+
+- intent: hosu
+  examples: |
+    - [101호](ho)
+    - [102호](ho)
+    - [1103호](ho)
+    - [1706호](ho)
+    - [***호](ho)
+    
 - intent: mood_answer
   examples: |
     - 오늘 기분 어떄?
@@ -32,7 +65,7 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
-    - see you later
+    - see you laterqkq
 
 - intent: affirm
   examples: |

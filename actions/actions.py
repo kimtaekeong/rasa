@@ -25,3 +25,18 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import Restarted
+from typing import Any, Dict, List, Text, Optional
+
+class ActionRestarted(Action):
+    
+    def name(self) -> Text:
+        return "action_restart"   
+    
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+        ) -> List[Dict[Text, Any]]:
+
+        return [Restarted()]
