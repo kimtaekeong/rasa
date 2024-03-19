@@ -1,6 +1,6 @@
 version: "2.0"
 
-rules:
+# rules:
 
 # - rule: Say goodbye anytime the user says goodbye
 #   steps:
@@ -11,3 +11,11 @@ rules:
 #   steps:
 #   - intent: bot_challenge
 #   - action: utter_iamabot
+
+
+rules:
+- rule: necessary location
+  steps:
+  - intent: on_light
+  - action: no_location_form
+  - active_loop: no_location_form

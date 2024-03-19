@@ -12,13 +12,7 @@ entities:
 slots:
   location:
     type: text
-    influence_conversation: true
-    mappings:
-      - type: from_text
-        conditions:
-          - active_loop: no_location_form
-            requested_slot: location
-
+    influence_conversation: false
 
 
 responses:
@@ -41,4 +35,6 @@ responses:
 forms:
   no_location_form:
     required_slots:
-      - location
+      location:
+        - type: from_entitiy
+          entity: location

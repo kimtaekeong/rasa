@@ -5,10 +5,10 @@ stories:
 ##수정중-form
 - story: turn on light
   steps:
-  - intent: on_light
-  # - action: no_location_form
-  # - active_loop: no_location_form
-  - action: utter_on_light
+    - intent: on_light
+    - action: no_location_form
+    - active_loop: no_location_form
+    - action: utter_on_light
 
 - story: turn off light
   steps:
