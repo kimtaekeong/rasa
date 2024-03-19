@@ -15,7 +15,8 @@ intents:
   # - bot_challenge
 entities:
   - name
-  - add
+  - add1
+  - add2
   - do
   - ho
 
@@ -23,7 +24,10 @@ slots:
   name:
     type: text
     influence_conversation: false
-  add:
+  add1:
+    type: text
+    influence_conversation: false  
+  add2:
     type: text
     influence_conversation: false  
   do:
@@ -45,7 +49,7 @@ responses:
   - text: "{name}, 몇 동 몇 호세요 ?"
 
   utter_entire_add:
-  - text: "{name} {add}로 보내겠습니다."
+  - text: "{name} {add1} {add2}로 보내겠습니다."
   
   utter_dong:
   - text: "호수도 말씀해주세요"
