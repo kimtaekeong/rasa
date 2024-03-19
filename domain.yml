@@ -1,76 +1,30 @@
 version: "2.0"
 
 intents:
-  - greet
-  # - goodbye
-  # - affirm
-  # - deny
-  - mood_answer
-  - apartment
-  - affirm
-  - address
-  - dong
-  - hosu
-  # - mood_unhappy
-  # - bot_challenge
+  - on_light
+  - off_light
+  - on_heat
+  - off_heat
+  
 entities:
-  - name
-  - add1
-  - add2
-  - do
-  - ho
+  - location
 
 slots:
-  name:
+  location:
     type: text
     influence_conversation: false
-  add1:
-    type: text
-    influence_conversation: false  
-  add2:
-    type: text
-    influence_conversation: false  
-  do:
-      type: text
-      influence_conversation: false   
-  ho:
-      type: text
-      influence_conversation: false   
-
 
 responses:
-  utter_greet:
-  - text: "안녕하세요 저는 오늘의 챗봇입니다!"
+  utter_on_light:
+  - text: "{location} 조명을 켰습니다."
 
-  utter_mood_answer:
-  - text: "저야 뭐 매일 똑같죠 ㅎㅎ!"
+  utter_off_light:
+  - text: "{location} 조명을 껐습니다."
 
-  utter_detail_address:
-  - text: "{name}, 몇 동 몇 호세요 ?"
+  utter_on_heat:
+  - text: "{location} 난방을 켰습니다."
 
-  utter_entire_add:
-  - text: "{name} {add1} {add2}로 보내겠습니다."
-  
-  utter_dong:
-  - text: "호수도 말씀해주세요"
+  utter_off_heat:
+  - text: "{location} 난방을 껐습니다."
 
-  utter_hosu:
-  - text: "{name} {do} {ho}로 보내겠습니다."
 
-    # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  # utter_goodbye:
-  # - text: "Bye"
-
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
-
-    
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

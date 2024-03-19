@@ -2,46 +2,27 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+
+- story: turn on light
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_answer
-  - action: utter_mood_answer
+  - intent: on_light
+  - action: utter_on_light
 
-- story: apart name
+- story: turn off light
   steps:
-    - intent: apartment
-    - action: utter_detail_address
+  - intent: off_light
+  - action: utter_off_light
 
-- story: collecting address 1 
+
+- story: turn on heating system
   steps:
-  - intent: address
-  - action: utter_entire_add
+  - intent: on_heat
+  - action: utter_on_heat
 
-- story: collecting address 2
+
+- story: turn on heating system
   steps:
-  - intent: dong
-  - action: utter_dong
-  - intent: hosu
-  - action: utter_hosu
+  - intent: off_heat
+  - action: utter_off_heat
 
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
 
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye

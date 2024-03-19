@@ -1,132 +1,54 @@
 version: "2.0"
 
 nlu:
-
-- intent: apartment
+- intent: on_light
   examples: |
-    - [은마아파트](name)
-    - [장미아파트](name)
-    - [사랑아파트](name)
-    - [푸르지오](name)
-    - [아이파크](name)
-    - [@@아파트](name)
+    - [안방](location) 조명 켜줘
+    - [거실](location) 조명 켜줘
+    - [작은방](location) 조명 켜줘
+    - [주방](location) 조명 켜줘
+    - [화장실](location) 조명 켜줘
+    - [안방](location) 불 켜줘
+    - [거실](location) 불 켜줘
+    - [작은방](location) 불 켜줘
+    - [주방](location) 불 켜줘
+    - [화장실](location) 불 켜줘
 
-- intent: address
+- intent: off_light
   examples: |
-    - [100동](add1) [100호](add2)
-    - [101동](add1) [101호](add2)
-    - [117동](add1) [801호](add2)
-    - [103동](add1) [303호](add2)
-    - [110동](add1) [505호](add2)
+    - [안방](location) 조명 꺼줘
+    - [거실](location) 조명 꺼줘
+    - [작은방](location) 조명 꺼줘
+    - [주방](location) 조명 꺼줘
+    - [화장실](location) 조명 꺼줘
+    - [안방](location) 불 꺼줘
+    - [거실](location) 불 꺼줘
+    - [작은방](location) 불 꺼줘
+    - [주방](location) 불 꺼줘
+    - [화장실](location) 불 꺼줘
 
-- intent: dong
+- intent: on_heat
   examples: |
-    - [108동](do)
-    - [101동](do)
-    - [8동](do)
-    - [***동](do)
+    - [안방](location) 난방 켜줘
+    - [거실](location) 난방 켜줘
+    - [작은방](location) 난방 켜줘
+    - [주방](location) 난방 켜줘
+    - [화장실](location) 난방 켜줘
+    - [안방](location) 히터 켜줘
+    - [거실](location) 히터 켜줘
+    - [작은방](location) 히터 켜줘
+    - [주방](location) 히터 켜줘
+    - [화장실](location) 히터 켜줘
 
-- intent: hosu
+- intent: off_heat
   examples: |
-    - [101호](ho)
-    - [102호](ho)
-    - [1103호](ho)
-    - [1706호](ho)
-    - [***호](ho)
-    
-    
-
-
-- intent: greet
-  examples: |
-    - 안녕
-    - 안녕하세요
-    - 반갑습니다
-    - 오랜만이에요
-    - 좋은 아침이에요
-    - 반가워요
-    - 방가방가
-    - 하이루
-    - 좋은 아침입니다
-
-
-- intent: mood_answer
-  examples: |
-    - 오늘 기분 어떄?
-    - 밥은 잘 잡쉈어?
-    - 하는 일 모두 무탈하지?
-
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you laterqkq
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - [안방](location) 난방 꺼줘
+    - [거실](location) 난방 꺼줘
+    - [작은방](location) 난방 꺼줘
+    - [주방](location) 난방 꺼줘
+    - [화장실](location) 난방 꺼줘
+    - [안방](location) 히터 꺼줘
+    - [거실](location) 히터 꺼줘
+    - [작은방](location) 히터 꺼줘
+    - [주방](location) 히터 꺼줘
+    - [화장실](location) 히터 꺼줘
