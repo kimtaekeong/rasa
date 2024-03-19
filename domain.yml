@@ -12,7 +12,14 @@ entities:
 slots:
   location:
     type: text
-    influence_conversation: false
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: no_location_form
+            requested_slot: location
+
+
 
 responses:
   utter_on_light:
@@ -27,4 +34,11 @@ responses:
   utter_off_heat:
   - text: "{location} 난방을 껐습니다."
 
+  utter_ask_location:
+  - text: "어떤 곳의 조명을 켜드릴까요?"
 
+##수정중
+forms:
+  no_location_form:
+    required_slots:
+      - location
