@@ -15,7 +15,9 @@ version: "2.0"
 
 rules:
 - rule: necessary location
-  steps:
-  - intent: on_light
-  - action: no_location_form
+  condition:
   - active_loop: no_location_form
+  steps:
+    - action: no_location_form
+    - active_loop: null
+    - action: utter_on_light

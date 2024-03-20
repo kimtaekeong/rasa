@@ -5,26 +5,34 @@ stories:
 ##수정중-form
 - story: turn on light
   steps:
-    - intent: on_light
-    - action: no_location_form
-    - active_loop: no_location_form
-    - action: utter_on_light
+  - intent: on_light
+  - action: no_location_form
+  - active_loop: no_location_form
+  - action: utter_ask_location   # 사용자에게 어떤 곳의 조명을 켤 것인지 다시 묻습니다.
+  - active_loop: no_location_form
+  - action: utter_on_light
 
 - story: turn off light
   steps:
   - intent: off_light
+  # - action: no_location_form
+  # - active_loop: no_location_form
   - action: utter_off_light
 
 
 - story: turn on heating system
   steps:
   - intent: on_heat
+  # - action: no_location_form
+  # - active_loop: no_location_form
   - action: utter_on_heat
 
 
 - story: turn on heating system
   steps:
   - intent: off_heat
+  # - action: no_location_form
+  # - active_loop: no_location_form
   - action: utter_off_heat
 
 

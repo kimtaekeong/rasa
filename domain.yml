@@ -29,12 +29,20 @@ responses:
   - text: "{location} 난방을 껐습니다."
 
   utter_ask_location:
-  - text: "어떤 곳의 조명을 켜드릴까요?"
+    - text: "어떤 곳의 조명을 켜드릴까요?"
 
 ##수정중
 forms:
   no_location_form:
     required_slots:
       location:
-        - type: from_entitiy
+        - type: from_entity
           entity: location
+
+  
+actions:
+  - utter_ask_location
+
+session_config:
+  session_expiration_time: 1
+  carry_over_slots_to_new_session: true
