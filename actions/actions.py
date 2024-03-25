@@ -26,6 +26,9 @@
 #
 #         return []
 
+
+
+from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import Restarted
 from typing import Any, Dict, List, Text, Optional
@@ -40,3 +43,22 @@ class ActionRestarted(Action):
         ) -> List[Dict[Text, Any]]:
 
         return [Restarted()]
+    
+
+    
+class ActionTurnOnLight(Action):
+
+    def name(self) -> Text:
+        return "action_turn_on_light"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        location = tracker.get_slot("location")
+
+        if not location:
+            dispatcher.utter_message(text="어디 불을 켜드릴까요?")
+        else:
+            dispatcher.utter_message(text=f"{location} 조명을 켰습니다.")
+        return []

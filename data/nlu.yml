@@ -13,6 +13,7 @@ nlu:
     - [작은방](location) 불 켜줘
     - [주방](location) 불 켜줘
     - [화장실](location) 불 켜줘
+    - 너무 어두워. 
 
 - intent: off_light
   examples: |
