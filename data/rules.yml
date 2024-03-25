@@ -21,3 +21,4 @@ rules:
     - action: no_location_form
     - active_loop: null
     - action: utter_on_light
+    - action: action_restart
